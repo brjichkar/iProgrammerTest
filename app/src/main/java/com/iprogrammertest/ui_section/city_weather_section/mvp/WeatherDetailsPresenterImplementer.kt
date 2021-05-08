@@ -3,7 +3,6 @@ package com.iprogrammertest.ui_section.city_weather_section.mvp
 import com.iprogrammertest.R
 import com.iprogrammertest.db_section.AppDatabase
 import com.iprogrammertest.ui_section.city_weather_section.model.Main
-import com.iprogrammertest.ui_section.city_weather_section.model.WeatherResponse
 
 class WeatherDetailsPresenterImplementer(mview:WeatherDetailsMVP.WeatherDetailsView):
     WeatherDetailsMVP.WeatherDetailsPresenter,

@@ -3,7 +3,6 @@ package com.iprogrammertest.ui_section.city_weather_section.mvp
 import com.iprogrammertest.db_section.AppDatabase
 import com.iprogrammertest.ui_section.base_class_section.MvpView
 import com.iprogrammertest.ui_section.city_weather_section.model.Main
-import com.iprogrammertest.ui_section.city_weather_section.model.WeatherResponse
 
 class WeatherDetailsMVP {
     interface WeatherDetailsView:MvpView{

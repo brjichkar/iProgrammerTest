@@ -1,7 +1,6 @@
 package com.iprogrammertest.ui_section.city_weather_section.mvp
 
 import android.os.AsyncTask
-import android.util.Log
 import com.iprogrammertest.api_section.ApiClient
 import com.iprogrammertest.api_section.ApiInterface
 import com.iprogrammertest.db_section.AppDatabase

@@ -13,10 +13,8 @@ import com.iprogrammertest.ui_section.city_weather_section.adapter.AdapterCityRe
 import com.iprogrammertest.ui_section.city_weather_section.adapter.CityListAdapter
 import com.iprogrammertest.ui_section.city_weather_section.decorator.SimpleDividerItemDecoration
 import com.iprogrammertest.ui_section.city_weather_section.model.Main
-import com.iprogrammertest.ui_section.city_weather_section.model.WeatherResponse
 import com.iprogrammertest.ui_section.city_weather_section.mvp.WeatherDetailsMVP
 import com.iprogrammertest.ui_section.city_weather_section.mvp.WeatherDetailsPresenterImplementer
-import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -71,23 +69,26 @@ class MainActivity : BaseActivity(),WeatherDetailsMVP.WeatherDetailsView {
         })
     }
 
+    // api call of getting weather details successful.
     override fun onWeatherDetailsSuccessful() {
         onError("Record Added")
         mCityAutocomplete.setText("")
         mPresenter.onGetAllCityRequest(mAppDb)
     }
 
+    // api call of getting weather details failed.
     override fun onWeatherDetailsFailed(errorMsg: String) {
         showAlertForError(errorMsg)
     }
 
+    // api call of getting all city details present from DB
     override fun getAllCityRecord(tempList: List<Main>) {
         mPreviousSearchList.clear()
         mPreviousSearchList.addAll(tempList)
         mAdapter.notifyDataSetChanged()
     }
 
-    private val onItemClickListener = OnItemClickListener { adapterView, view, i, l ->
+     private val onItemClickListener = OnItemClickListener { adapterView, view, i, l ->
         val item = adapterView.getItemAtPosition(i) as Main
         mCityAutocomplete.setText(item.cityName)
         showAlertForError("Temp of ${item.cityName} is ${item.temp} degrees")
