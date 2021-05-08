@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iProgrammerTest</string>
+
+    <string name="some_error">Could not perform the desired action due to a technical Error.</string>
+    <string name="not_connected_to_internet">Please check your internet</string>
+
+</resources>
